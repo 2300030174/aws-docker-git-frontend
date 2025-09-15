@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_URL = "http://ec2-18-234-236-147.compute-1.amazonaws.com:8081/api/cart";
+const API_URL = "http://50.17.61.136:8081/api/cart";
 
-const API_BASE = "http://ec2-18-234-236-147.compute-1.amazonaws.com:8081/api/cart";
+const API_BASE = "http://50.17.61.136:8081/api/cart";
 
 export const addToCart = async (userId, productId) => {
   return await axios.post(`${API_BASE}/add`, {
@@ -29,4 +29,5 @@ export const removeCartItem = async (cartItemId) => {
         console.error("Error removing item from cart", error);
     }
 };
+
 
