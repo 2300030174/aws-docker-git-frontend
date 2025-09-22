@@ -33,11 +33,7 @@ const HomePage = () => {
     <div className="container">
       {/* Header */}
       <div className="header">
-<<<<<<< HEAD
-        <h1>Home services</h1>
-=======
-        <h1>E-Commerce</h1>
->>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
+        <h1>Home Services</h1>
         <div className="header-right">
           {isAuthenticated ? (
             <div className="profile-menu">
@@ -70,26 +66,13 @@ const HomePage = () => {
             <Link to="/about-us">About Us</Link>
           </li>
           <li>
-<<<<<<< HEAD
-            <Link to="/computers">repair services</Link>
+            <Link to={isAuthenticated ? "/computers" : "/login"}>Repair Services</Link>
           </li>
           <li>
-            <Link to={isAuthenticated ? "/mobiles" : "/login"}>cleaning services</Link>
+            <Link to={isAuthenticated ? "/mobiles" : "/login"}>Cleaning Services</Link>
           </li>
           <li>
-            <Link to={isAuthenticated ? "/laptops" : "/login"}>Hire service providers</Link>
-=======
-            <Link to="/computers">Computers</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/mobiles" : "/login"}>Mobiles</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/laptops" : "/login"}>Laptops</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/pendrives" : "/login"}>Pendrives</Link>
->>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
+            <Link to={isAuthenticated ? "/laptops" : "/login"}>Hire Service Providers</Link>
           </li>
         </ul>
       </div>
@@ -100,7 +83,7 @@ const HomePage = () => {
       </div>
 
       {/* Footer */}
-      <div className="footer">@ copyright E-Commerce</div>
+      <div className="footer">@ copyright Home Services</div>
     </div>
   );
 };
