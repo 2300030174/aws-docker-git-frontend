@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://54.159.91.96:8081/auth";
+const API_URL = "http://3.80.85.23:8081/auth";
 
 export const login = async (username, password) => {
   const response = await axios.post(`${API_URL}/login`, { username, password });
@@ -15,5 +15,6 @@ export const signup = async (username, email, password) => {
 export const logout = () => {
   localStorage.removeItem("token");
 };
+
 
 
