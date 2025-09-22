@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
+<<<<<<< HEAD
+=======
+import { getProducts } from "../services/productService";
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const Mobiles = () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
   const [products, setProducts] = useState([]);
   const { addToCart } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
+<<<<<<< HEAD
     // Hardcoded cleaning services
     const cleaningServices = [
       {
@@ -43,15 +52,32 @@ const Mobiles = () => {
 
     addToCart(product);
     navigate("/cart"); // Redirect to cart page after adding service
+=======
+    const fetchProducts = async () => {
+      const data = await getProducts("mobiles"); // Fetch only computer category
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    navigate("/cart"); // Redirect to cart page after adding product
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
   };
 
   return (
     <div className="product-container">
+<<<<<<< HEAD
       <h2>Cleaning Services</h2>
+=======
+      <h2>Mobiles</h2>
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product-card">
+<<<<<<< HEAD
               <img src={product.imagePath} alt={product.name} />
               <h4>{product.name}</h4>
               <p>${product.price.toFixed(2)}</p>
@@ -62,6 +88,16 @@ const Mobiles = () => {
           ))
         ) : (
           <p>No cleaning services available.</p>
+=======
+              <img src={`http://localhost:8080/api/products/images/${product.imagePath}`} alt={product.name} />
+              <h4>{product.name}</h4>
+              <p>${product.price.toFixed(2)}</p>
+              <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+            </div>
+          ))
+        ) : (
+          <p>No mobiles available.</p>
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
         )}
       </div>
     </div>

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
+<<<<<<< HEAD
+=======
+import { getProducts } from "../services/productService";
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
@@ -9,6 +13,7 @@ const Computers = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+<<<<<<< HEAD
     // Hardcoded products for Home Services
     const hardcodedProducts = [
       {
@@ -32,6 +37,13 @@ const Computers = () => {
     ];
 
     setProducts(hardcodedProducts);
+=======
+    const fetchProducts = async () => {
+      const data = await getProducts("computers"); // Fetch only computer category
+      setProducts(data);
+    };
+    fetchProducts();
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
   }, []);
 
   const handleAddToCart = (product) => {
@@ -43,17 +55,32 @@ const Computers = () => {
     }
 
     addToCart(product);
+<<<<<<< HEAD
     navigate("/cart");
+=======
+    navigate("/cart"); // Redirect to cart page after adding product
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
   };
 
   return (
     <div className="product-container">
+<<<<<<< HEAD
       <h2>Home Services</h2>
+=======
+      <h2>Computers</h2>
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product-card">
+<<<<<<< HEAD
               <img src={product.imagePath} alt={product.name} />
+=======
+              <img
+                src={`http://localhost:8080/api/products/images/${product.imagePath}`}
+                alt={product.name}
+              />
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
               <h4>{product.name}</h4>
               <p>${product.price.toFixed(2)}</p>
               <button onClick={() => handleAddToCart(product)}>
@@ -62,7 +89,11 @@ const Computers = () => {
             </div>
           ))
         ) : (
+<<<<<<< HEAD
           <p>No home services available.</p>
+=======
+          <p>No computers available.</p>
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
         )}
       </div>
     </div>

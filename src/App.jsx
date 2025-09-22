@@ -8,6 +8,10 @@ import AboutUs from './components/Aboutus';
 import Computers from './components/Computers';
 import Mobiles from './components/Mobiles';
 import Laptops from './components/Laptops';
+<<<<<<< HEAD
+=======
+import Pendrives from './components/Pendrives';
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
 import Home from './components/Home'
 import ProductPage from './components/ProductPage'
 import Cart from './components/Cart';
@@ -30,6 +34,10 @@ function App() {
           <Route path="computers" element={<Computers />} />
           <Route path="mobiles" element={<Mobiles />} />
           <Route path="laptops" element={<Laptops />} />
+<<<<<<< HEAD
+=======
+          <Route path="pendrives" element={<Pendrives />} />
+>>>>>>> 350b0b7057fe48fc409858b2657d643fb34b2e13
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="productpage" element={<ProductPage />} />
