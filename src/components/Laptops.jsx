@@ -16,21 +16,21 @@ const Laptops = () => {
         name: "John Doe",
         domain: "Plumbing",
         mobile: "+91 9876543210",
-        imagePath: "https://via.placeholder.com/150?text=John+Doe",
+        imagePath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPnE_fy9lLMRP5DLYLnGN0LRLzZOiEpMrU4g&s",
       },
       {
         id: 2,
         name: "Jane Smith",
         domain: "Electrician",
         mobile: "+91 9123456780",
-        imagePath: "https://via.placeholder.com/150?text=Jane+Smith",
+        imagePath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdrkNdumT-XgDOUdMgaleHw1Zr1F2cB0satw&s",
       },
       {
         id: 3,
         name: "Bob Johnson",
         domain: "House Cleaning",
         mobile: "+91 9988776655",
-        imagePath: "https://via.placeholder.com/150?text=Bob+Johnson",
+        imagePath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkL4nwNk6k_5nZ_F5Mmo4QauoglmkDTd9VRJ_gd_n1WTQkCPrv7b2n-_iz_cBgpCubDyI&usqp=CAU",
       },
     ];
 
