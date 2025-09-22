@@ -1,0 +1,257 @@
+/* Base container colors & fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffeef2; /* pastel pink background */
+  color: #333;
+}
+
+/* Grid layout container */
+.container{
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 200px 1fr 1fr;
+  height: 90vh;
+  width: 90vw;
+}
+
+/* Header */
+.header{
+  grid-area: header;
+  background: #a8e6cf; /* pastel green */
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background: #ffd6d6; /* pastel pink */
+  padding: 20px;
+  font-weight: 500;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ffd1d1;
+  color: #000;
+}
+
+.sidebar ul li a.active {
+  background-color: #a8e6cf;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background: #a8e6cf; /* pastel green */
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 500;
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  padding: 20px;
+}
+
+/* Product / Card Grid */
+.product-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 1px solid #ffd1d1;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background: #fff0f5; /* very light pastel pink */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #d46a6a; /* pastel red/pink text */
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card button {
+  background: #a8e6cf; /* pastel green button */
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.product-card button:hover {
+  background: #82d6a3; /* slightly darker green on hover */
+}
+
+/* Profile dropdown & icons */
+.profile-icon {
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 38px;
+  background-color: #ffeef2;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 140px;
+  z-index: 100;
+}
+
+.dropdown a,
+.dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background-color: #ffd6d6;
+}
+
+/* Cart styles */
+.cart-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff0f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ffd1d1;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #a8e6cf;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background-color: #82d6a3;
+}
+/* About grid layout */
+.about-grid {
+  display: flex; /* use flexbox instead of grid for horizontal alignment */
+  flex-wrap: wrap; /* allow wrapping to next line if screen is small */
+  gap: 20px;
+  justify-content: flex-start; /* align left */
+}
+
+/* About item card */
+.about-item {
+  flex: 1 1 200px; /* grow, shrink, base width */
+  max-width: 220px; /* limit maximum card width */
+  background: #fff0f5; /* light pastel pink */
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  color: #333;
+}
+
+.about-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.about-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #d46a6a;
+}
+
+.about-item p {
+  font-size: 14px;
+  color: #555;
+}
