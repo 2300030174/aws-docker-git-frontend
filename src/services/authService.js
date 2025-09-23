@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://3.80.85.23:8081/auth";
+const API_URL = "http://3.89.242.54:8081/auth";
 
 // Permanent username & password (hardcoded account)
 const PERMANENT_USER = {
@@ -29,3 +29,4 @@ export const signup = async (username, email, password) => {
 export const logout = () => {
   localStorage.removeItem("token");
 };
+
